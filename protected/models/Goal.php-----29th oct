@@ -1,0 +1,237 @@
+<?php
+
+/**
+ * This is the model class for table "goal".
+ *
+ * The followings are the available columns in table 'goal':
+ * @property integer $id
+ * @property string $name
+ * @property string $discription
+ * @property string $termination
+ * @property string $action
+ * @property string $image
+ * @property string $stage
+ * @property string $visibility
+ * @property string $stage_description
+ * @property string $status
+ * @property string $view
+ * @property string $interesting_status
+ * @property string $comment_status
+ * @property integer $create_time
+ * @property integer $update_time
+ * @property integer $category_id
+ * @property string $tags
+ * @property integer $author_id
+ */
+class Goal extends CActiveRecord
+{
+     public $file;
+        private $_oldTags;
+	/**
+	 * @return string the associated database table name
+	 */
+	public function tableName()
+	{
+		return 'goal';
+	}
+
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		// NOTE: you should only define rules for those attributes that
+		// will receive user inputs.
+		return array(
+			array('name, discription, image', 'required'),
+			array('create_time, update_time, category_id, author_id', 'numerical', 'integerOnly'=>true),
+			array('name, termination, action, image', 'length', 'max'=>555),
+			array('status', 'length', 'max'=>8),
+                        array('visibility', 'length', 'max'=>8),
+			array('view', 'length', 'max'=>255),
+			array('interesting_status, comment_status', 'length', 'max'=>3),
+                         array('tags', 'normalizeTags'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('id, name, discription, termination, action, image, stage, stage_description, status,visibility, view, interesting_status, comment_status, create_time, update_time, category_id, tags, author_id', 'safe', 'on'=>'search'),
+		);
+	}
+
+	/**
+	 * @return array relational rules.
+	 */
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		/*return array(
+			'author' => array(self::BELONGS_TO, 'User', 'author_id'),
+		);*/
+            return array(
+			'author' => array(self::BELONGS_TO, 'User', 'author_id'),
+			'comments' => array(self::HAS_MANY, 'Comment', 'goal_id', 'condition'=>'comments.status='.Comment::STATUS_APPROVED, 'order'=>'comments.create_time DESC'),
+			'commentCount' => array(self::STAT, 'Comment', 'goal_id', 'condition'=>'status='.Comment::STATUS_APPROVED),
+                        'loveCount' => array(self::STAT, 'Subscrbe', 'goal_id', 'condition'=>'type='.Subscrbe::STATUS_LOVE),
+                        'subcribes' => array(self::HAS_MANY, 'Subscrbe', 'goal_id', 'order'=>'subcribes.create_time DESC'),
+		);
+	}
+
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public function attributeLabels()
+	{
+		return array(
+			'id' => 'ID',
+			'name' => 'Name',
+			'discription' => 'Description',
+			'termination' => 'Termination',
+			'action' => 'Action',
+			'image' => 'Image',
+			'stage' => 'Stage',
+                        'visibility' => 'Visibility',
+			'stage_description' => 'Stage Description',
+			'status' => 'Status',
+			'view' => 'View',
+			'interesting_status' => 'Interesting Status',
+			'comment_status' => 'Comment Status',
+			'create_time' => 'Create Time',
+			'update_time' => 'Update Time',
+			'category_id' => 'Category',
+			'tags' => 'Tags',
+			'author_id' => 'Author',
+		);
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
+	 */
+	public function search()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('discription',$this->discription,true);
+		$criteria->compare('termination',$this->termination,true);
+		$criteria->compare('action',$this->action,true);
+		$criteria->compare('image',$this->image,true);
+		$criteria->compare('stage',$this->stage,true);
+                $criteria->compare('visibility',$this->visibility,true);
+		$criteria->compare('stage_description',$this->stage_description,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('view',$this->view,true);
+		$criteria->compare('interesting_status',$this->interesting_status,true);
+		$criteria->compare('comment_status',$this->comment_status,true);
+		$criteria->compare('create_time',$this->create_time);
+		$criteria->compare('update_time',$this->update_time);
+		$criteria->compare('category_id',$this->category_id);
+		$criteria->compare('tags',$this->tags,true);
+		$criteria->compare('author_id',$this->author_id);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 * Please note that you should have this exact method in all your CActiveRecord descendants!
+	 * @param string $className active record class name.
+	 * @return Goal the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+        
+        /**
+	 * This is invoked before the record is saved.
+	 * @return boolean whether the record should be saved.
+	 */
+	protected function beforeSave()
+	{
+		if(parent::beforeSave())
+		{
+			if($this->isNewRecord)
+			{
+				$this->create_time=$this->update_time=time();
+				$this->author_id = Yii::app()->user->id;
+			}
+			else
+				$this->update_time=time();
+			return true;
+		}
+		else
+			return false;
+	}
+        
+        public function getUrl()
+	{
+		return Yii::app()->createUrl('post/view', array(
+			'id'=>$this->id,
+			'name'=>$this->name,
+		));
+	}
+        
+        public function getTagLinks()
+	{
+		$links=array();
+		foreach(Tag::string2array($this->tags) as $tag)
+			$links[]=CHtml::link(CHtml::encode($tag), array('post/index', 'tag'=>$tag));
+		return $links;
+	}
+
+	/**
+	 * Normalizes the user-entered tags.
+	 */
+	public function normalizeTags($attribute,$params)
+	{
+		$this->tags=Tag::array2string(array_unique(Tag::string2array($this->tags)));
+	}
+        
+       public function addComment($comment)
+	{
+		if(Yii::app()->params['commentNeedApproval'])
+			$comment->status=Comment::STATUS_PENDING;
+		else
+			$comment->status=Comment::STATUS_APPROVED;
+		$comment->goal_id=$this->id;
+		return $comment->save();
+	}
+
+	/**
+	 * This is invoked when a record is populated with data from a find() call.
+	 */
+	protected function afterFind()
+	{
+		parent::afterFind();
+		$this->_oldTags=$this->tags;
+	}
+        protected function afterSave()
+	{
+		parent::afterSave();
+		Tag::model()->updateFrequency($this->_oldTags, $this->tags);
+	}
+
+	/**
+	 * This is invoked after the record is deleted.
+	 */
+	protected function afterDelete()
+	{
+		parent::afterDelete();
+		Comment::model()->deleteAll('post_id='.$this->id);
+		Tag::model()->updateFrequency($this->tags, '');
+	}
+}

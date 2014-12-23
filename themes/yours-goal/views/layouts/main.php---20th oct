@@ -1,0 +1,151 @@
+<?php
+	Yii::app()->clientscript
+		// use it when you need it!
+		/*
+		->registerCssFile( Yii::app()->theme->baseUrl . '/css/bootstrap.css' )
+		->registerCssFile( Yii::app()->theme->baseUrl . '/css/bootstrap-responsive.css' )
+		->registerCoreScript( 'jquery' )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-transition.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-alert.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-modal.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-dropdown.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-scrollspy.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-tab.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-tooltip.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-popover.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-button.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-collapse.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-carousel.js', CClientScript::POS_END )
+		->registerScriptFile( Yii::app()->theme->baseUrl . '/js/bootstrap-typeahead.js', CClientScript::POS_END )
+		*/
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<meta name="language" content="en" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- Le styles -->
+
+<!--[if gte IE 9]>
+    <style type="text/css">
+      .gradient {
+
+         filter: none;
+
+      }
+    </style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/main.css" />
+<!-- Le fav and touch icons -->
+
+<!-- blueprint CSS framework ADDED FOR VALIDATIONS STARTS-->
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/custom.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js" />
+<!-- blueprint CSS framework ADDED FOR VALIDATIONS END-->
+
+</head>
+
+<body>
+	<div class="main-site_container">
+
+            <?php  include'header.php'; ?>
+			<!-- dynamic active  menu  system start  -->
+			<?php 
+$controllerId = Yii::app()->controller->id;
+$actionId = strtolower($this->getAction()->getId()); //echo $actionId;
+if($controllerId=="site" || $controllerId=="goal" || $controllerId=="avatar"){
+    
+   if($controllerId=="goal") {$actionId="textpage";}
+?>
+                <section class="mainMenu-full <?php echo $controllerId; ?>">
+
+                    <div class="mainMenu-box">
+
+                        <div class="section-wrapper clearfix">
+
+                            <ul class="mainMenu clear-ul">
+
+                                <li><a href="" class="mainMenu-item <?php if($actionId=="textpage"){echo "active";} ?>"><?php echo Yum::t("TARGETS")?></a></li>
+
+                                <li><a href="" class="mainMenu-item item2"><?php echo Yum::t("TEMPLATES")?></a></li>
+
+                                <li><a href="<?php echo Yii::app()->createUrl("avatar/avatar/people"); ?>" class="mainMenu-item item3  <?php if($actionId=="people"){echo "active";} ?>"><?php echo Yum::t("PEOPLE")?></a></li>
+
+                                <li><a href="<?php echo Yii::app()->createUrl("site/help"); ?>" class="mainMenu-item item4 <?php if($actionId=="help"){echo "active";} ?>"><?php echo Yum::t("HELP")?></a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+<?php   if($controllerId=="site" || $controllerId=="avatar") { ?>
+                    <div class="mainMenu-tabs-box">
+
+                        <div class="section-wrapper clearfix">
+						<div class="mainMenu-tabs mainMenu-tab3 active">
+                            <?php if($actionId=="people") { ?>     <div class="mainMenu-tabBtm-title" style="text-transform: capitalize;"><?php echo Yum::t("Participants of the project");?></div><?php } else { ?>
+                                <div class="mainMenu-tabBtm-title" style="text-transform: capitalize;"><?php echo Yum::t($actionId);?></div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <?php } $actionId = strtolower($this->getAction()->getId()); //echo $controllerId."-".$actionId; ?>
+            <?php   if($controllerId=="goal" && ($actionId=="all" || $actionId=="finished" || $actionId=="interesting")) {  ?>
+                      <div class="mainMenu-tabs-box">
+                        <div class="section-wrapper clearfix">
+                     <ul class="mainMenu-tabs mainMenu-tab1 clear-ul active" id="filters">
+                                <li><a href="<?php echo Yii::app()->createUrl("goal/interesting"); ?>" class="mainMenu-tabs-item <?php if($actionId=="interesting") { echo 'active'; } ?>" data-filter-value=".interesting" >Interesting</a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl("goal/all"); ?>" class="mainMenu-tabs-item item2 <?php if($actionId=="all") { echo 'active'; } ?>" data-filter-value="*" >All</a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl("goal/finished"); ?>" class="mainMenu-tabs-item item3 <?php if($actionId=="finished") { echo 'active'; } ?>" data-filter-value=".completed" >Finished</a></li>
+                            </ul>
+                        </div>
+                      </div>
+                    <?php } ?>
+                </section>
+		<?php } ?>	
+			<!-- dynamic active  menu  system End  -->
+              <?php if(isset($this->breadcrumbs)):?>
+                            <?php
+//                                $this->widget('zii.widgets.CBreadcrumbs', array(
+//                                    'links'=>$this->breadcrumbs,
+//                                    'homeLink'=>false,
+//                                    'tagName'=>'ul',
+//                                    'separator'=>'',
+//                                    'activeLinkTemplate'=>'<li><a href="{url}">{label}</a> <span class="divider">/</span></li>',
+//                                    'inactiveLinkTemplate'=>'<li><span>{label}</span></li>',
+//                                    'htmlOptions'=>array ('class'=>'breadcrumb')
+//                                )); 
+                            ?>
+                    <!-- breadcrumbs -->
+              <?php endif?>
+
+            <?php echo $content ?>
+
+
+            <div class="siteFooter-ejector"></div>
+            
+        </div><!--END main-site_container-->
+	
+		<?php  include'footer.php'; ?>
+    
+</body>
+</html>

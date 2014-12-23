@@ -1,0 +1,12 @@
+﻿<?php
+$con = mysql_connect("localhost", "yourgoal", "Youar19001#");
+if($con)
+{
+	$link = mysql_select_db("yourgoal", $con);
+	if($link)
+	{
+		echo "DB Select";
+	}else{ echo "DB Not Selected";}
+	
+}else{ echo "not connect"; }
+?>

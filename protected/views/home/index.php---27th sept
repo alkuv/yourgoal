@@ -1,0 +1,616 @@
+<?php
+/* @var $this HomeController */
+
+$this->breadcrumbs=array(
+	'Home',
+);
+?>
+
+            <div class="content">
+
+                <section class="main-top-photo">
+
+                    <div class="topShadow">
+
+                        <div class="section-wrapper clearfix">
+
+                            <p class="frstText">Задай <span class="yellow">цель</span>. Получи <span class="yellow">поддержку</span>.
+
+                                Достигни <span class="yellow">результата</span>.</p>
+
+                            <p class="scndText">С нами это просто</p>
+
+                            <a href="" class="yellow-btn">Присоединиться</a>
+
+                            <a href="" class="downCircleArrow" id="slideTo_serv4you" onClick="return false"></a>
+
+                        </div>
+
+                    </div>
+
+                </section><!--END main-top-photo-->
+
+                <section class="serv4you" id="serv4you">
+
+                    <div class="section-wrapper clearfix">
+
+                        <h3 class="sectionTitle">Мы придумали этот сервис для вас!</h3>
+
+                        <div class="servBlocks-box">
+
+                            <div class="servBlock gradient">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-1.png" width="58" height="58" alt="" />
+
+                                </div>
+
+                                <div class="text-box">
+
+                                    <span class="servBlock-title">Что же такое Цель?</span>
+
+                                    Цель - это мечта ограниченая во времени. Все хотят, чтобы их мечты становились реальностью. Каждый желает получить лучшую работу, на которую хочется идти, верных и интересных друзей, возможность отдыхать там, где хочется, делать то о чём мечтаешь. 
+
+                                </div>
+
+                            </div>
+
+                            <div class="servBlock block2 gradient">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-2.png" width="60" height="59" alt="" />
+
+                                </div>
+
+                                <div class="text-box">
+
+                                    <span class="servBlock-title">Как цель помогает добиваться результата?</span>
+
+                                    Правильно заданная цель не только помогает начать движение вперёд и набираться энтузиазма, но и будет способствовать выходу из затруднительных ситуаций, которые будут возникать на этом пути. 
+
+                                </div>
+
+                            </div>
+
+                            <div class="servBlock block3 gradient">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-3.png" width="62" height="62" alt="" />
+
+                                </div>
+
+                                <div class="text-box">
+
+                                    <span class="servBlock-title">Как оказывается поддержка?</span>
+
+                                    <ul class="servBlock-list clear-ul">
+
+                                        <li>Cочетание работающих параметров для 100% достижения результата
+
+                                        </li>
+
+                                        <li>Формулирование целей  по проверенным моделям</li>
+
+                                        <li>Яркая визуализация</li>
+
+                                        <li>За вашим успехом следят сотни пользователей сообщества</li>
+
+                                        <li>Вас стимулируют успехи других людей в схожих целях</li>
+
+                                        <li>Готовые алгоритмы достижения целей</li>
+
+                                        <li>Отлаженные механизмы повышения мотивации</li>
+
+                                    </ul> 
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <a href="" class="downCircleArrow" id="slideTo_mostPurpose" onClick="return false"></a>
+
+                    </div>
+
+                </section><!--END serv4you-->
+
+
+                <section class="mostPurpose">
+
+                    <div class="section-wrapper clearfix">
+
+                        <h3 class="sectionTitle">Популярные цели</h3>
+
+                        <div class="mostPurpose-list">
+
+                            <div class="mostPurpose-block">
+
+                                <div class="purpose-cnt">
+
+                                    12358
+
+                                </div>
+
+                                <a href="" class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/purp1.png" width="471" height="264" alt="Purpose1"/>
+
+                                </a>
+
+                                <div class="clearfix"></div>
+
+                                <a href="" class="mostPurpose-title">
+
+                                    Создать студию записи
+
+                                </a>
+
+                                <p class="mostPurpose-text">
+
+                                    Хочу закупить и поставить в своём городе два вендинговых аппарата по приготовлению пиццы. Бизнес новый, на мой взгляд рентабельный. Есть ряд плюсов. Клиент
+
+                                </p>
+
+                            </div>
+
+                            <div class="mostPurpose-block">
+
+                                <div class="purpose-cnt">
+
+                                    12358
+
+                                </div>
+
+                                <a href="" class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/purp2.png" width="471" height="264" alt="Purpose2"/>
+
+                                </a>
+
+                                <div class="clearfix"></div>
+
+                                <a href="" class="mostPurpose-title">
+
+                                    Приобрести байк
+
+                                </a>
+
+
+                                <p class="mostPurpose-text">
+
+                                    Клиент не имеет дела с персоналом,машина сдачи даёт правильно)) Малая арендная площадь. Большая проходимость в предполагаемых торговых площадках.
+
+                                </p>
+
+                            </div>
+
+                        </div><!-- mostPurpose-list END-->
+
+                        <div class="mostPurpose-list">
+
+                            <div class="mostPurpose-block">
+
+                                <div class="purpose-cnt">
+
+                                    12358
+
+                                </div>
+
+                                <a href="" class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/purp3.png" width="471" height="264" alt="Purpose3"/>
+
+                                </a>
+
+                                <div class="clearfix"></div>
+
+                                <a href="" class="mostPurpose-title">
+
+                                    2 месяца отпуска
+
+                                </a>
+
+                                <p class="mostPurpose-text">
+
+                                    Есть ряд плюсов. Клиент не имеет дела с персоналом,машина сдачи даёт правильно)) Малая арендная площадь. Большая проходимость в предполагаемых торговых площадках.
+
+                                </p>
+
+                            </div>
+
+                            <div class="mostPurpose-block">
+
+                                <div class="purpose-cnt">
+
+                                    12358
+
+                                </div>
+
+                                <a href="" class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/purp4.png" width="471" height="264" alt="Purpose4"/>
+
+                                </a>
+
+                                <div class="clearfix"></div>
+
+
+
+                                <a href="" class="mostPurpose-title">
+
+                                    Научиться кататься на лыжах
+
+                                </a>
+
+
+
+                                <p class="mostPurpose-text">
+
+                                    Хочу закупить и поставить в своём городе два вендинговых аппарата по приготовлению пиццы. Малая арендная площадь. Большая проходимость.
+
+                                </p>
+
+                            </div>
+                            
+                        </div><!-- mostPurpose-list END-->
+                        
+                    </div>
+
+                </section><!--END mostPurpose-->
+
+
+                <section class="serv4you-2nd">
+
+                    <div class="section-wrapper clearfix">
+
+                        <a href="" class="downCircleArrow" onClick="return false" id="slideTo_serv4you-2nd"></a>
+
+
+
+                        <h3 class="sectionTitle">Мы придумали этот сервис для вас!</h3>
+
+                        <div class="serv4you-2nd-box">
+
+                            <div class="serv4you-2nd-block">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-2nd-1.png" width="225" height="140" alt="" />
+
+                                </div>
+
+                                <p>
+
+                                    Для тех, кто уже достигает свои цели<br>
+
+                                    и хочет больших результатов
+
+                                </p>
+
+                            </div>
+
+                            <div class="serv4you-2nd-block">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-2nd-2.png" width="180" height="155" alt="" />
+
+                                </div>
+
+                                <p>
+
+                                    Для тех, кто уже достигает свои цели<br>
+
+                                    и хочет больших результатов
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="serv4you-2nd-box"> 
+
+                            <div class="serv4you-2nd-block">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-2nd-3.png" width="154" height="98" alt="" />
+
+                                </div>
+
+                                <p>
+
+                                    Для тех, кто никак<br>
+
+                                    не может двинуться с места
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="serv4you-2nd-block">
+
+                                <div class="img-box">
+
+                                    <img src="<?php echo Yii::app()->baseUrl; ?>/images/serv4you-2nd-4.png" width="173" height="140" alt="" />
+
+                                </div>
+
+                                <p>
+
+                                    Для тех, кто уже достигает свои цели<br>
+
+                                    и хочет больших результатов
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section><!--END serv4you-2nd-->
+
+                <section class="reviews">
+
+                    <div class="section-wrapper clearfix">                       
+
+                        <h3 class="sectionTitle">Отзывы о сервисе</h3>
+
+
+
+                        <div class="reviews-list-wrapper">
+
+                            <a href="#" class="prev-review"></a>
+
+                            <a href="#" class="next-review"></a>
+
+
+
+                            <ul class="clear-ul reviews-list clearfix">
+
+                                <li class="reviews-list-item">
+
+                                    <div class="img-box">
+
+                                        <img src="<?php echo Yii::app()->baseUrl; ?>/images/reviews-photo/photo1.png" width="143" height="143" alt="rev1" class="reviwer-photo"/>
+
+
+
+                                        <span class="reviwer-name">Павел,</span>
+                                        
+
+                                        <span class="reviwer-post">повелитель<br>фиолетовых лобстеров</span>
+
+                                    </div>
+
+                                    <div class="text-box">
+
+                                        По обычаю всех вогонских кораблей этот выглядел так, будто не сошел  со
+
+                                        стапелей верфи, а нарос сосулькой где-нибудь на заднем дворе. Одних только
+
+                                        отвратно-желтых пригорков и павильонов, выступавших из его поверхности под
+
+                                        некрасивыми углами, хватило бы, чтобы обезобразить  большинство  кораблей,
+
+                                        но, увы, сделать этот звездолет еще  безобразнее  было  просто  технически
+
+                                        невозможно.
+
+                                    </div>
+
+                                </li>
+
+                                <li class="reviews-list-item">
+
+                                    <div class="img-box">
+
+                                        <img src="<?php echo Yii::app()->baseUrl; ?>/images/reviews-photo/photo2.png" width="143" height="143" alt="rev2" class="reviwer-photo"/>
+
+                                        <span class="reviwer-name">Павел,</span>
+
+                                        <span class="reviwer-post">повелитель<br>фиолетовых лобстеров</span>
+
+                                    </div>
+
+                                    <div class="text-box">
+
+                                        Многие цивилизации считают, что Вселенная появилась не сама собой, а по
+
+                                        воле того или иного  божества.  Однако  народ  джатравартидов,  населяющий
+
+                                        планету Витриоль-6, верует, что на самом деле вся  Вселенная  вылетела  из
+
+                                        ноздри  существа  по  имени  Великий  Зеленый  Апчхибуздравий,  когда  это
+
+                                        существо чихнуло.
+
+                                    </div>
+
+                                </li>
+
+                                <li class="reviews-list-item">
+
+                                    <div class="img-box">
+
+                                        <img src="<?php echo Yii::app()->baseUrl; ?>/images/reviews-photo/photo1.png" width="143" height="143" alt="rev3" class="reviwer-photo"/>
+
+                                        <span class="reviwer-name">Павел,</span>
+
+                                        <span class="reviwer-post">повелитель<br>фиолетовых лобстеров</span>
+
+                                    </div>
+
+                                    <div class="text-box">
+
+                                        По обычаю всех вогонских кораблей этот выглядел так, будто не сошел  со
+
+                                        стапелей верфи, а нарос сосулькой где-нибудь на заднем дворе. Одних только
+
+                                        отвратно-желтых пригорков и павильонов, выступавших из его поверхности под
+
+                                        некрасивыми углами, хватило бы, чтобы обезобразить  большинство  кораблей,
+
+                                        но, увы, сделать этот звездолет еще  безобразнее  было  просто  технически
+
+                                        невозможно.
+
+
+
+                                    </div>
+
+                                </li>
+
+                                <li class="reviews-list-item">
+
+                                    <div class="img-box">
+
+                                        <img src="<?php echo Yii::app()->baseUrl; ?>/images/reviews-photo/photo2.png" width="143" height="143" alt="rev4" class="reviwer-photo"/>
+                                        
+                                        <span class="reviwer-name">Павел,</span>
+
+                                        <span class="reviwer-post">повелитель<br>фиолетовых лобстеров</span>
+
+                                    </div>
+
+                                    <div class="text-box">
+
+                                        Многие цивилизации считают, что Вселенная появилась не сама собой, а по
+
+                                        воле того или иного  божества.  Однако  народ  джатравартидов,  населяющий
+
+                                        планету Витриоль-6, верует, что на самом деле вся  Вселенная  вылетела  из
+
+                                        ноздри  существа  по  имени  Великий  Зеленый  Апчхибуздравий,  когда  это
+
+                                        существо чихнуло.
+
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section><!--END serv4you-2nd-->
+
+                <section class="joinUs">
+
+                    <div class="section-wrapper clearfix">                       
+
+                        <h3 class="sectionTitle">Присоединяйтесь к нам</h3>
+                        
+                        <p>Сегодня нам 20 лет, а завтра уже 30 и 35!<br>
+
+                            Действуйте прямо сейчас</p>
+
+                        <a href="" class="white-btn">Действовать</a>
+
+                    </div>
+
+                </section><!--END serv4you-2nd-->
+
+            </div><!--END content-->
+            
+            
+        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery-1.10.2.min.js"></script>
+
+        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.slideto.v1.1.js"></script>
+
+        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+
+
+        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/js.js"></script>
+
+        <script type="text/javascript">
+
+                $(document).ready(function(e) {
+
+                    $('#slideTo_serv4you').slideto({
+                        target: '#serv4you',
+                        speed: 'slow'
+
+                    });
+
+                    $('#slideTo_mostPurpose').slideto({
+                        target: '.mostPurpose',
+                        speed: 'slow'
+
+                    });
+
+                    $('#slideTo_serv4you-2nd').slideto({
+                        target: '.serv4you-2nd',
+                        speed: 'slow'
+
+                    });
+
+                    initImg();
+
+                });
+
+                $(window).resize(function(e) {
+
+                    initImg();
+
+                });
+
+                function initImg() {
+
+                    if ($('.main-top-photo').length) {
+
+                        var tmp = $(window).height();
+
+                        var cof = tmp / 978;
+
+                        var corr = 0;
+
+                        if ((tmp < 978) && (tmp > 465)) {
+
+                            if (tmp < 610) {
+
+                                corr = 100;
+
+                                if (tmp < 525) {
+
+                                    corr = 200;
+
+                                }
+
+                            } else {
+
+                                corr = 0;
+
+                            }
+
+                            $('.main-top-photo .section-wrapper')
+
+                                    .css({'height': (675 + corr) * cof + 'px', 'padding-top': (237 - corr) * cof + 'px'});
+
+                            if ((tmp < 465)) {
+
+                                $('.main-top-photo .section-wrapper')
+
+                                        .css({'height': '420px', 'padding-top': '18px'});
+
+                            }
+                            
+                        }
+
+                    }
+
+                }
+
+        </script>

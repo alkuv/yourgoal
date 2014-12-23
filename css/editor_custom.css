@@ -1,0 +1,105 @@
+.cke_top{
+	border-bottom:none;
+	padding:5px 8px 0px;
+	white-space:normal;
+	background:#f4f4f4;
+}
+
+.cke_toolgroup {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none;
+    border-color: none;
+    border-image: none;
+    border-radius: 0;
+    border-style: none;
+    border-width: 0;
+    box-shadow: none;
+    float: left;
+    margin: 0 0px 5px 0;
+}
+
+.cke_bottom{
+	display:none;
+}
+
+.cke_chrome {
+
+    display: block;
+    padding: 0;
+	
+ 	border: 1px solid #D7D7D7;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    color: #4C4C4C;
+}
+
+
+.cke_button__source_label{
+	display:none !important;
+}
+a.cke_button{
+	background-color: #FFF;
+    border-radius: 4px !important;
+    display: block;
+    float: left;
+    height: 25px !important;
+    margin-right: 3px !important;
+    width: 25px !important;
+	padding:0 !important;
+	cursor:pointer;
+}
+a.cke_button .cke_button_icon{
+	background-image:url("../images/editor-options.png")!important;
+	background-position: 0 0;
+
+}
+
+.cke_button_on{
+	background-color:#F9B600 !important;
+	border:none !important;
+}
+
+
+a.cke_button_off:hover,
+a.cke_button_off:focus,
+a.cke_button_off:active,
+a.cke_button_on:hover,
+a.cke_button_on:focus,
+a.cke_button_on:active{
+	background-color:#F9B600 !important;
+	box-shadow:none !important;
+}
+
+.cke_button_disabled{
+	display:none !important;
+}
+.cke_button_icon{
+	margin:5px 0 0 7px;
+}
+.cke_button__source_icon{
+	background-position: 0px 0px !important;
+}
+.cke_button__bold_icon{
+	background-position: -28px 0px !important;
+}
+.cke_button__italic_icon{
+	background-position: -57px 0px !important;
+}
+.cke_button__strike_icon{
+	background-position: -85px 0px !important;
+}
+.cke_button__numberedlist_icon{
+	background-position: -139px 0px !important;
+}
+.cke_button__bulletedlist_icon{
+	background-position: -111px 0px !important;
+}
+.cke_button__link_icon{
+	background-position: -168px 0px !important;
+}
+.cke_button__image_icon{
+	background-position: -196px 0px !important;
+}

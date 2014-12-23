@@ -1,0 +1,7 @@
+.mostPurpose,.siteFooter,.siteHeader,.dairyContainer{background: white;}
+.mainMenu-full.goal{min-height : 0;}
+.pager{clear:both; width:615px !important;}
+
+.mostPurpose-block:nth-child(odd) {
+   margin-left: 0 !important;
+}

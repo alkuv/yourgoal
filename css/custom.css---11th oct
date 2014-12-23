@@ -1,0 +1,13 @@
+.mostPurpose-block {background:#fffeed !important;; }
+.items .mostPurpose-block{height:475px !important;}
+.btmBox .comments{height:18px;}
+ .check-pro{float: left;}
+ .Progress-wrapper{ float: right;width:200px;background:#474676;height:18px; border: 1px solid #474676; border-radius:8px; -web-kit-border-radius:8px; -moz-border-radius:8px;}
+.Progress-bar{background:#ffec3d; height: 18px; border-radius:inherit; -web-kit-border-radius:inherit; -moz-border-radius:inherit;}
+ .mostPurpose-text{text-align: center; padding-bottom: 20px;}
+.peopleList,.mostPurpose,.siteFooter,.siteHeader,.dairyContainer{background: white;}
+.mainMenu-full.goal{min-height : 0;}
+.pager{clear:both; width:615px !important;}
+.mostPurpose-block:nth-child(odd) {
+   margin-left: 0 !important;
+}

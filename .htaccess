@@ -1,0 +1,46 @@
+Options -MultiViews
+DirectoryIndex index.php
+
+#AddHandler x-httpd-php php
+#AddType text/html php
+
+# File modified on Wed May 23 09:51:43 2012 by server
+# For security reasons, mod_php is not used on this server. Use a php.ini file for php directives
+# php_flag session.use_trans_sid off
+
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+
+RewriteBase /
+
+
+#RewriteCond %{REQUEST_FILENAME} ^index.php$
+#RewriteRule ^([^/]+)/(.*)/$|^([^/]+)(.*)$|^$ index.php?%{QUERY_STRING}&include_file=%{REQUEST_FILENAME} [NC,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*?)index\.php([^\s]*) [NC]
+RewriteRule ^ %1%2 [R=301,L,NE]
+
+
+#RewriteRule (.*) index.php?%{QUERY_STRING} [NC,L]
+
+
+RewriteRule ^admin/(.*)$ admin/$1 [NC,S=2]
+RewriteCond %{HTTP_HOST} ^www.yourgoal\.ru$ [NC]
+RewriteRule ^(.*)$ http://yourgoal.ru/$1 [R=301,L]
+
+# File modified on Wed May 23 09:51:44 2012 by server
+# For security reasons, mod_php is not used on this server. Use a php.ini file for php directives
+# php_value upload_max_filesize 40M
+# For security reasons, mod_php is not used on this server. Use a php.ini file for php directives
+# php_value post_max_size 40M
+# For security reasons, mod_php is not used on this server. Use a php.ini file for php directives
+# php_value max_execution_time 2000
+# For security reasons, mod_php is not used on this server. Use a php.ini file for php directives
+# php_value max_input_time 2000
+
+php_flag display_errors on
+php_value error_log /home/r/rangoz/public_html/php-errors.log
