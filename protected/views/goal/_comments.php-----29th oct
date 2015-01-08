@@ -1,0 +1,19 @@
+<?php foreach($comments as $comment): ?>
+
+ <div class="comment-item clearfix" id="c<?php echo $comment->id; ?>">
+                    <a href="" class="user-img-box">
+                            <img src="<?php  echo Yii::app()->baseUrl;?>/img/tmp/comment-user.png" width="75" height="75" alt="" />
+                    </a>
+                    <div class="comment-body">
+                            <div class="userComment-info">
+                                    <a href="" class="userComment-name"><?php echo $comment->authorLink; ?></a>,
+                                    <span class="userComment-date"><?php echo date('F j, Y \a\t h:i a',$comment->create_time); ?></span>
+                            </div> 
+                            <p class="userComment-text"><?php echo nl2br(CHtml::encode($comment->content)); ?></p>
+                            <a href="" style="display:none;" class="commentAnswer">Reply</a> 
+                    </div>
+
+            </div>
+<?php endforeach; ?>
+
+

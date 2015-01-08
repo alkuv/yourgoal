@@ -1,0 +1,303 @@
+ <style>#imageupload{display:none;}.errorSummary{color:red;}</style>
+
+ <?php if(isset($_REQUEST['step'])) {$step=$_REQUEST['step'];}?>
+ <div class="content addStep-page">
+<section class="mainMenu-full">
+	<div class="mainMenu-box">
+	<div class="section-wrapper clearfix">
+	<h3 class="mainMenu-title">
+	<span class="big">OBJECTIVES APPENDIX</span>
+	<span class="small">3 simple steps and your goal will appear on the Site</span>
+	</h3>
+	</div>
+	</div>
+
+	<div class="mainMenu-tabs-box">
+		<div class="section-wrapper clearfix">
+		   <div class="stepTab-box">
+				<div class="stepTab-head stepTab-head1 active <?php //if($step==1) {echo "";} ?>">
+					Step 1:<br>
+					<span class="upper">DESCRIPTION</span>
+				</div>
+				<div class="stepTab-head stepTab-head2 <?php //if($step==2) {echo "active";} ?>">
+					Step 2:<br>
+					<span class="upper">STAGES</span>
+				</div>
+				<div class="stepTab-head stepTab-head3 <?php //if($step==3) {echo "active";} ?>">
+					Step 3:<br>
+					<span class="upper">TAGS AND CATEGORIES</span>
+				</div>
+		   </div>
+		</div>
+	</div>
+
+</section>
+<section class="stepTab-section">
+<div class="section-wrapper clearfix">
+<div class="stepTab-body">
+<div class="stepTab step1 active<?php //if($step==1) {echo "active";} ?>">
+<?php   if($step==1){ ?>
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'goal-form',
+        'htmlOptions'=> array('enctype'=>"multipart/form-data"),
+	'enableAjaxValidation'=>false,
+)); ?>
+	<?php echo $form->errorSummary($model); ?>
+								<span class="form-label">Name of the destination</span>
+								<?php echo $form->textField($model,'name',array('class'=>inputDef,'maxlength'=>200)); ?>								
+								<span class="form-label">Desciption of purpose</span>
+                                    <div class="textareaDef-box">
+                                    	<div class="textarea-editor">
+                                            <a href="" class="textarea-editor-func func-chars"></a>
+                                            <a href="" class="textarea-editor-func func-bold active"></a>
+                                            <a href="" class="textarea-editor-func func-italic"></a>
+                                            <a href="" class="textarea-editor-func func-textDecor"></a>
+                                            <a href="" class="textarea-editor-func func-olist"></a>
+                                            <a href="" class="textarea-editor-func func-ulist"></a>
+                                            <a href="" class="textarea-editor-func func-link"></a>
+                                            <a href="" class="textarea-editor-func func-video"></a>
+                                        </div>
+                                    	<textarea class="textareaDef" name="Goal[discription]" id="editor1"></textarea>
+
+                                    </div>
+                                    <span class="form-label">Termination Criterion</span>
+									<?php echo $form->textField($model,'termination',array('class'=>inputDef,'maxlength'=>200)); ?>
+                                   
+                                    <span class="form-label">The First Action</span>
+									<?php echo $form->textField($model,'action',array('class'=>inputDef,'maxlength'=>200)); ?>
+                                   
+                                    <span class="form-label corr-mar">Add a Photo</span>
+                                    <div class="addingPhotos-box">
+                                    	<div style="width:auto" class="addingPhoto">
+                                        	 <!--<img src="img/tmp/img.png" width="77" height="52" alt="" />
+                                           <a href="" class="addingPhoto-del">
+                                            	<img src="img/adding-img-x.png" width="12" height="12" alt="" />
+                                            </a>-->
+                                        </div>
+                                    	<!--<div href="" class="addingPhoto">
+                                        	<img src="img/tmp/img2.png" width="77" height="52" alt="" />
+                                            <a href="" class="addingPhoto-del">
+                                            	<img src="img/adding-img-x.png" width="12" height="12" alt="" />
+                                            </a>
+                                        </div>-->
+                                    	<a href="javascript:void(0)" onclick="$('#imageupload').click()" class="addingPhoto-link">Add a picture</a>
+										<?php echo CHtml::activeFileField($model, 'file' ,array('id'=>'imageupload',)); ?>
+
+                                    </div>
+                                    <div class="stepTab-nav">
+									<?php //echo CHtml::submitButton($model->isNewRecord ? 'Next' : 'Next',array('class'=>'stepTab-next'));  ?>
+									
+                                    <a href="" class="stepTab-next">Next</a>
+                                    <?php echo CHtml::submitButton($model->isNewRecord ? 'Draft' : 'Draft',array('class'=>'stepTab-draft'));  ?>
+                                    <!--<a href="" class="stepTab-draft">Draft</a>-->
+                                    </div>
+		
+		<?php } ?>
+						</div><!-- END step1-->
+
+                        <div class="stepTab step2 <?php if($step==2) {echo "active";} ?>">
+                                    <div class="stepTab-stage clearfix">
+                                    	<span class="stepTab-stage-title">Step 1</span>
+                                        <a href="" class="stepTab-stage-del">Delete</a>
+                                        <div class="clearfix"></div>
+                                        <hr />
+                                        <div class="labelMod clearfix">
+                                            <span class="form-label">Name of phase</span>
+                                            <span class="info-box">
+                                                <div class="splach-info">
+                                                    Name of the Phase
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <input type="text" name="Goal[stage][1]"class="inputDef"/>
+                                        
+
+                                        <span class="form-label">Description</span>
+                                        <div class="textareaDef-box">
+                                            <div class="textarea-editor">
+                                                <a href="" class="textarea-editor-func func-chars"></a>
+                                                <a href="" class="textarea-editor-func func-bold"></a>
+                                                <a href="" class="textarea-editor-func func-italic"></a>
+                                                <a href="" class="textarea-editor-func func-textDecor"></a>
+                                                <a href="" class="textarea-editor-func func-olist"></a>
+                                                <a href="" class="textarea-editor-func func-ulist"></a>
+                                                <a href="" class="textarea-editor-func func-link"></a>
+                                                <a href="" class="textarea-editor-func func-video"></a>
+
+                                            </div>
+                                            <textarea class="textareaDef" name="Goal[description][1]"id="editor2"></textarea>
+                                        </div>
+
+                                        <a href="" class="stepTab-stage-addImg">Add picture</a>
+                                        <a href="" class="stepTab-stage-stagePrice">Add value stage</a> 
+                                 	</div>
+
+                                    
+
+                                	<div class="stepTab-stage clearfix">
+
+                                    	<span class="stepTab-stage-title">Step 2</span>
+
+                                        <a href="" class="stepTab-stage-del">Delete</a>
+
+                                        <div class="clearfix"></div>
+
+                                        <hr />
+
+                                        <div class="labelMod clearfix">
+                                            <span class="form-label">Name of Phase</span>
+                                        </div>
+
+                                        <input type="text" name="Goal[stage][2]" class="inputDef"/>                                        
+
+                                        <span class="form-label">Description</span>
+
+                                        <div class="textareaDef-box">
+                                            <div class="textarea-editor">
+                                                <a href="" class="textarea-editor-func func-chars"></a>
+                                                <a href="" class="textarea-editor-func func-bold"></a>
+                                                <a href="" class="textarea-editor-func func-italic"></a>
+                                                <a href="" class="textarea-editor-func func-textDecor"></a>
+                                                <a href="" class="textarea-editor-func func-olist"></a>
+                                                <a href="" class="textarea-editor-func func-ulist"></a>
+                                                <a href="" class="textarea-editor-func func-link"></a>
+                                                <a href="" class="textarea-editor-func func-video"></a>
+                                            </div>
+                                            <textarea class="textareaDef" name="Goal[description][2]" id="editor3"></textarea>
+                                        </div>
+                                        <a href="" class="stepTab-stage-addImg">Add picture</a>
+                                        <a href="" class="stepTab-stage-stagePrice">Add value stage</a>
+                                 	</div>
+                            
+                            <?php for($i=3;$i<11;$i++) { ?>
+                            <div class="stepTab-stage clearfix  step_no<?php echo $i; ?>"  style="display:none">
+                                    	<span class="stepTab-stage-title">Step <?php echo $i; ?></span>
+                                        <a href="" class="stepTab-stage-del">Delete</a>
+                                        <div class="clearfix"></div>
+                                        <hr />
+                                        <div class="labelMod clearfix">
+                                            <span class="form-label">Name of Phase</span>
+                                        </div>
+                                        <input type="text" name="Goal[stage][<?php echo $i; ?>]" class="inputDef"/>                                        
+                                        <span class="form-label">Description</span>
+                                        <div class="textareaDef-box">
+                                            <div class="textarea-editor">
+                                                <a href="" class="textarea-editor-func func-chars"></a>
+                                                <a href="" class="textarea-editor-func func-bold"></a>
+                                                <a href="" class="textarea-editor-func func-italic"></a>
+                                                <a href="" class="textarea-editor-func func-textDecor"></a>
+                                                <a href="" class="textarea-editor-func func-olist"></a>
+                                                <a href="" class="textarea-editor-func func-ulist"></a>
+                                                <a href="" class="textarea-editor-func func-link"></a>
+                                                <a href="" class="textarea-editor-func func-video"></a>
+                                            </div>  
+                                            <textarea class="textareaDef" name="Goal[description][<?php echo $i; ?>]" id="editor<?php echo $i; ?>"></textarea>
+
+                                        </div>
+
+                                        <a href="" class="stepTab-stage-addImg">Add picture</a>
+                                        <a href="" class="stepTab-stage-stagePrice">Add value stage</a>
+                                 	</div>
+                            <?php } ?>
+                                        <hr class="corr_hr" />
+
+                                    <a href="" class="stageAdd">Add Stage</a>
+
+                                    <div class="clearfix"></div>
+
+
+                                    
+
+                                    <div class="stepTab-nav">
+
+                                    	<a href="" class="stepTab-prev">
+
+                                        	<img src="<?php echo Yii::app()->baseUrl?>/images/back-btn.png" width="17" height="28" alt="back" />
+
+                                        </a>
+
+                                    
+
+                                    	<a href="" class="stepTab-next">Next</a>
+										
+                                        <?php echo CHtml::submitButton($model->isNewRecord ? 'Draft' : 'Draft',array('class'=>'stepTab-draft'));  ?>
+<!--                                    	<a href="" class="stepTab-draft">Draft</a>-->
+
+                                    </div>
+
+                                </div><!-- END step2-->
+
+
+
+                           
+
+                               <div class="stepTab step3  <?php if($step==3) {echo "active";} ?>">
+
+				<span class="form-label">Category</span>
+                                   <select class="selectDef" name="Goal[category_id]">
+                                   <?php                                        
+                                   $categorys=Categories::model()->findAll();                                  
+                                   foreach($categorys as $category) {  ?>
+                                    <option value="<?php echo $category->id;?>"><?php echo $category->category;?></option>
+                                       <?php } ?>
+                                    </select>
+
+                                    <div class="selects-line clearfix">
+                                    	<div class="select-box">
+                                        <span class="form-label corr_float">Purpose visible</span>
+                                        <?php echo ZHtml::enumDropDownList( $model,'status' ,array('class'=>'selectDef')); ?>
+                                        </div>
+                                        <div class="select-box">
+                                            <span class="form-label">The goal can comment</span>
+                                                <?php echo ZHtml::enumDropDownList( $model,'comment_status' ,array('class'=>'selectDef')); ?>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    
+
+                                    
+
+                                    <span class="form-label">Tags</span>
+                                    <?php $this->widget('CAutoComplete', array(
+			'model'=>$model,
+			'attribute'=>'tags',
+			'url'=>array('suggestTags'),
+			'multiple'=>true,
+			'htmlOptions'=>array('size'=>50,'class'=>'inputDef corr_marBtm'),
+                            )); ?>
+                                   <!-- <input type="text" class="inputDef corr_marBtm"/>-->
+
+                                    <span class="btm-label">                                        
+                                        A maximum of 30 keywords. Tags should all be in lower case ans separatd by commas.
+                                        example: Mars,deoxyribonucleic, mysticism,patch
+                                    </span>
+
+                                    <hr class="corr_hr" />
+
+                                    <a href="" class="blue-link">Add the date of completion</a>
+
+                                    or&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="blue-link">Timeframe</a>
+                                    <div class="stepTab-nav">
+                                    	<a href="" class="stepTab-prev">
+
+                                        	<img src="<?php echo Yii::app()->baseUrl?>/images/back-btn.png"width="17" height="28" alt="back" />
+
+                                        </a>
+
+                                        
+
+<!--                                    	<a href="" class="stepTab-next">Post</a>-->
+                                        <?php echo CHtml::submitButton($model->isNewRecord ? 'Post' : 'Post',array('class'=>'stepTab-next'));  ?>
+
+<!--                                    	<a href="" class="stepTab-draft">Draft</a>-->
+                                        <?php echo CHtml::submitButton($model->isNewRecord ? 'Draft' : 'Draft',array('class'=>'stepTab-draft'));  ?>
+
+                                    </div>
+
+                                </div><!-- END step3-->
+                                <?php $this->endWidget(); ?>
+
+                           </div>
+                        </div></section></div><!--END content-->

@@ -1,0 +1,61 @@
+<?php 
+/*
+$this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$model->search(),
+	'sortableAttributes' => array('username', 'createtime', 'status', 'lastvisit', 'avatar'),
+	'itemView' => '_view',
+)); 
+*/
+?>
+<style>.pager{clear:both;}</style>
+<section class="peopleList">
+<div class="section-wrapper clearfix">
+    <div class="people-container">
+        <div class="people-search-side clearfix">
+            <input type="text" class="inputDef watermark" placeholder="start typing the name,nickname or city" />
+                    <div class="peopleCnt">
+                            <span class="objectsCnt">13546</span> members <br>
+                            <span class="Cnt">13546</span>created goals
+                     </div>
+        </div>
+    <ul class="people-side clear-ul clearfix">
+<?php 
+
+$this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$model->search(),
+	//'sortableAttributes' => array('username', 'createtime', 'status', 'lastvisit', 'avatar'),
+	'itemView' => '_poeple',
+)); 
+
+?>
+</ul>
+
+<!--                        	<div class="people-pager-side clearfix">
+                                	<a href="" class="pager-prev nonactive"></a>
+                                    <a href="" class="pager-next"></a>
+                                    <ul class="clear-ul clearfix pager">
+                                    	<li><a href="" class="pager-item">1</a></li>
+                                    	<li><a href="" class="pager-item">2</a></li>
+                                    	<li><a href="" class="pager-item">3</a></li>
+                                    	<li><a href="" class="pager-item">4</a></li>
+                                    	<li><a href="" class="pager-item sel">5</a></li>
+                                    	<li><a href="" class="pager-item">6</a></li>
+                                    	<li><a href="" class="pager-item">7</a></li>
+                                    	<li><a href="" class="pager-item">8</a></li>
+                                    </ul>
+
+                                </div>-->
+
+                            </div>
+
+                             
+
+                            
+
+                            
+
+    
+
+                        </div>
+
+                </section><!--END-->

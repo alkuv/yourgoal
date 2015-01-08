@@ -1,0 +1,18 @@
+  <div class="content maintenance-page">
+                <section class="maintenance-section quoteMod-section">
+                        <div class="section-wrapper clearfix">
+    						<div class="maintenance-block">
+                            	<h1 class="maintenance-title regMod">Оставить отзыв</h1>
+                                <p class="reg-title">Мы будем очень рады, если вы оставите отзыв о нашем сервисе.</p> 
+								<img src="<?php echo Yii::app()->baseUrl; ?>/images/quote-img.png" width="64" height="60" alt="REG-PAGE" class="reg-img" />
+								
+								<form class="login-form quoteMod" id="quote-form">
+									<input type="text" class="inputDef watermark" placeholder="Ваше имя" />
+                                    <input type="text" class="inputDef watermark" placeholder="Кем работаете" />
+                                    <textarea class="textareaDef" placeholder="Отзыв"></textarea>
+                                    <input type="button" class="inputDefBtn" value="Отправить отзыв" />
+                                </form>
+ </div>
+</div>
+</section>
+</div><!--END content-->

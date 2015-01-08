@@ -1,0 +1,49 @@
+<?php foreach($comments as $comment): ?>
+
+ <div class="comment-item clearfix" id="c<?php echo $comment->id; ?>">
+	<?php //echo '<pre>'; print_r($comment);echo '</pre>'; ?>
+	<?php 
+	$connection = Yii::app()->db;
+	$sql="select * from profile where email='$comment->email'";
+	$command = $connection->createCommand($sql);
+	$row = $command->queryRow();
+	if(!empty($row)) {
+	
+	$id=$row['user_id'];
+	$sql="select * from user where id=$id";
+	$command = $connection->createCommand($sql);
+	$row = $command->queryRow();
+	$avatar=$row['avatar'];
+	}
+	
+	?><?php if(!empty($row)) { ?>
+                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/profile/profile/views/id/".$id) ?>" class="user-img-box">
+					
+					<?php if ($avatar!="" || $avatar!="gravatar") {?>
+				<img src="<?php echo Yii::app()->baseUrl."/".$avatar;?>" width="75" height="75" alt="photo" />
+				<?php } else { ?>
+				<img src="<?php echo Yii::app()->baseUrl?>/images/noimage.png" width="75" height="75" alt="photo" />
+				<?php } ?>
+					
+                    </a>
+					
+					<?php } else {?>
+					 <a href="javascript:void(0)" class="user-img-box">
+					<img src="<?php echo Yii::app()->baseUrl?>/images/noimage.png" width="75" height="75" alt="photo" />
+					</a>
+					<?php } ?>
+                    <div class="comment-body">
+                            <div class="userComment-info">
+                                   <!-- <a href="" class="userComment-name"></a>-->
+									<?php echo $comment->authorLink; ?>
+									,
+                                    <span class="userComment-date"><?php echo date('F j, Y \a\t h:i a',$comment->create_time); ?></span>
+                            </div> 
+                            <p class="userComment-text"><?php echo nl2br(CHtml::encode($comment->content)); ?></p>
+                            <a href="" style="display:none;" class="commentAnswer">Reply</a> 
+                    </div>
+
+            </div>
+<?php endforeach; ?>
+
+

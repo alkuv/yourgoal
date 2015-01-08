@@ -1,0 +1,30 @@
+[02-Dec-2014 20:14:48 Europe/Moscow] PHP Fatal error:  Call to undefined function rs() in /home/r/rangoz/public_html/protected/views/goal/view.php on line 38
+[02-Dec-2014 20:23:57 Europe/Moscow] PHP Fatal error:  Call to undefined function rs() in /home/r/rangoz/public_html/protected/views/goal/view.php on line 38
+[02-Dec-2014 20:47:06 Europe/Moscow] PHP Fatal error:  Call to undefined function getTranslatedText() in /home/r/rangoz/public_html/protected/views/goal/view.php on line 38
+[03-Dec-2014 07:48:47 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/r/rangoz/public_html/themes/yours-goal/views/layouts/main.php on line 46
+[03-Dec-2014 23:20:50 Europe/Moscow] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/r/rangoz/public_html/protected/views/goal/view.php on line 174
+[07-Dec-2014 16:28:41 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/r/rangoz/public_html/protected/views/goal/view.php on line 170
+[07-Dec-2014 16:28:43 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/r/rangoz/public_html/protected/views/goal/view.php on line 170
+[07-Dec-2014 16:32:46 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/r/rangoz/public_html/protected/views/goal/view.php on line 170
+[07-Dec-2014 16:34:53 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/r/rangoz/public_html/protected/views/goal/view.php on line 170
+[07-Dec-2014 16:40:46 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$user_detail' (T_VARIABLE) in /home/r/rangoz/public_html/protected/views/goal/_listgoal.php on line 46
+[07-Dec-2014 16:40:52 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$user_detail' (T_VARIABLE) in /home/r/rangoz/public_html/protected/views/goal/_listgoal.php on line 46
+[07-Dec-2014 16:43:27 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$user_detail' (T_VARIABLE) in /home/r/rangoz/public_html/protected/views/goal/_listgoal.php on line 46
+[07-Dec-2014 16:43:29 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$user_detail' (T_VARIABLE) in /home/r/rangoz/public_html/protected/views/goal/_listgoal.php on line 46
+[07-Dec-2014 20:16:01 Europe/Moscow] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/r/rangoz/public_html/protected/views/goal/_listgoal.php on line 49
+[07-Dec-2014 20:25:43 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 202
+[07-Dec-2014 20:25:45 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 202
+[07-Dec-2014 20:32:14 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 202
+[07-Dec-2014 20:32:49 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 202
+[07-Dec-2014 20:35:26 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 204
+[07-Dec-2014 20:35:29 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 204
+[07-Dec-2014 20:41:18 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 206
+[07-Dec-2014 20:41:20 Europe/Moscow] PHP Fatal error:  Call to a member function createUrl() on a non-object in /home/r/rangoz/public_html/framework/web/widgets/pagers/CLinkPager.php on line 206
+[08-Dec-2014 20:53:54 Europe/Moscow] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/r/rangoz/public_html/protected/modules/avatar/controllers/YumAvatarController.php on line 95
+[09-Dec-2014 19:39:47 Europe/Moscow] PHP Fatal error:  Call to a member function getAvatar() on a non-object in /home/r/rangoz/public_html/protected/modules/profile/views/profileComment/_view.php on line 13
+[09-Dec-2014 19:39:59 Europe/Moscow] PHP Fatal error:  Call to a member function getAvatar() on a non-object in /home/r/rangoz/public_html/protected/modules/profile/views/profileComment/_view.php on line 13
+[11-Dec-2014 20:07:37 Europe/Moscow] PHP Fatal error:  Cannot use object of type CDbCriteria as array in /home/r/rangoz/public_html/framework/db/schema/CDbCommandBuilder.php on line 554
+[15-Dec-2014 20:57:08 Europe/Moscow] PHP Parse error:  syntax error, unexpected '$stepId' (T_VARIABLE) in /home/r/rangoz/public_html/protected/controllers/GoalController.php on line 223
+[15-Dec-2014 21:51:48 Europe/Moscow] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/r/rangoz/public_html/protected/views/goal/view.php on line 222
+[15-Dec-2014 21:51:52 Europe/Moscow] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/r/rangoz/public_html/protected/views/goal/view.php on line 222
+[15-Dec-2014 21:52:03 Europe/Moscow] PHP Fatal error:  Call to a member function createCommand() on a non-object in /home/r/rangoz/public_html/protected/views/goal/view.php on line 222

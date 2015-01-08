@@ -1,0 +1,331 @@
+<style>.btmBox p{clear:both} .diaryEtaps{clear:both;}</style>
+<?php
+
+$resizeObj1 = new resize();                                      
+$ip_adress=$resizeObj1 -> get_client_ip();
+//$ip_adress;
+$record=Ipaddress::model()->findByAttributes(array('ip_address'=>$ip_adress,'goal_id'=>$model->id,'user_id'=>Yii::app()->user->id)); 
+if(empty ($record))
+    {
+        $ipmodel=new Ipaddress;
+        $ipmodel->user_id=Yii::app()->user->id;
+        $ipmodel->goal_id=$model->id;
+        $ipmodel->ip_address=$ip_adress;
+        $ipmodel->save(false);
+    }
+//echo '<pre>';print_r($record); echo '</pre>';
+?>
+
+<?php // echo '<pre>'; print_r($model); echo '</pre>';
+$viewed=$model->view+1;
+//echo '<pre>';print_r($_SERVER);echo '</pre>';
+?>
+
+<style>.dairy-top .socials a{background: none;}</style>
+<?php  Goal::model()->updateByPk($model->id,array("view"=>$viewed)); ?>
+<section class="dairyContainer">
+<div class="section-wrapper clearfix">
+      <?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+?>
+<div class="people-container">
+<div class="people-search-side clearfix">
+<div class="dairy-top">
+            <div class="leftSide">
+            <span class="dairy-top-title">
+    <?php echo $model->name;?> 
+	
+            </span>
+			
+			<?php if($kk==0 && $model->author_id==Yii::app()->user->id): ?>
+			<span id="edit"><a  style="float:left;"href="<?php echo  Yii::app()->createAbsoluteUrl("/goal/edit/id/$model->id") ?>" class="redactStage">
+			  <img src="<?php  echo Yii::app()->baseUrl;?>/images/redact.png" width="13" height="14" alt=""/></a> </span>
+              <?php endif;?> 
+            <div class="btmBox">
+            <span class="views">
+                <?php    
+                 $views = Ipaddress::model()->countByAttributes(array('goal_id'=>$model->id));
+                ?>
+            <?php echo $views; //if(!empty($model->view)) {echo $model->view+1;} else {echo "0";}?>
+            </span>
+        <?php if(isset (Yii::app()->user->id)) 
+            {
+            $record=Subscrbe::model()->findByAttributes(array('goal_id'=>$model->id,'author_id'=>Yii::app()->user->id,'type'=>'subscribe')); 
+           if(empty ($record)){
+               $class="subscibewithoutlogin";
+           }
+           else{
+                $class="subscibe";
+           }
+            }
+            else {$class="subscibewithoutlogin";}
+			
+			$cnt=Subscrbe::model()->countByAttributes(array('goal_id'=>$model->id, 'type'=>"love")); 
+ if(isset (Yii::app()->user->id)) 
+         {
+         $record=Subscrbe::model()->findByAttributes(array('goal_id'=>$model->id,'author_id'=>Yii::app()->user->id,'type'=>'love')); 
+          if(empty ($record)){
+               $classforlove="purpose-cnt_without";
+           }
+           else{
+                $classforlove="purpose-cnt";
+           }
+         } 
+ else
+ { $classforlove="purpose-cnt_without";}
+			
+			
+			
+            ?>
+			 <span class="subscribe" style="float:left">
+            <a style="float: none;margin-left: 18px;" href="javascript:void(0)" id="subcribe_<?php echo $model->id; ?>" onClick="subscribe(<?php echo $model->id ?>);" class="<?php echo $class;?>">subscribe</a>
+           </span>
+		  <span class="likes">
+           
+		   <div style="cursor:pointer;"class="<?php echo $classforlove; ?>" id="love_<?php echo $model->id;?>" onclick="love(<?php echo $model->id ?>)">   
+            <?php echo $cnt;?>		   
+			</div>
+            </span>
+	
+			
+			</div>
+            <hr style="width:176px;" />
+            <span class="socials-title">Tell a friend:</span>
+            <div class="socials clearfix">
+                <!-- SMARTADDON BEGIN -->
+<script type="text/javascript">
+(function() {
+var s=document.createElement('script');s.type='text/javascript';s.async = true;
+s.src='http://s1.smartaddon.com/share_addon.js';
+var j =document.getElementsByTagName('script')[0];j.parentNode.insertBefore(s,j);
+})();
+</script>
+
+<a href="http://www.smartaddon.com/?share" title="Share Button" onclick="return sa_tellafriend(<?php echo Yii::app()->createAbsoluteUrl("/goal/view/id/".$model->id);?>)">
+    <img alt="Share" src="http://lab.aronasoft.in/yourgoal/themes/yours-goal/img/socials24.png" border="0" />
+</a>
+<!-- SMARTADDON END -->
+<!--            <a href="javascript:void(0)" class="social-btn"></a>
+            <a href="javascript:void(0)" class="social-btn fb"></a>
+            <a href="javascript:void(0)" class="social-btn tw"></a>
+            <a href="javascript:void(0)" class="social-btn gg"></a>-->
+			
+            </div>
+			
+            <br>
+		<?php echo implode(', ', $model->tagLinks); ?>
+		 
+		
+		<br />
+		
+			<ul style="float:left; width:97%; margin-top: 12px;  list-style: outside none none;margin: 15px 0 0;padding: 0;">
+				<li style="float:left; width:20%;">
+					<div class="fb-like" data-href="<?php echo  $_SERVER['PHP_SELF']; ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+				</li>
+				<li style="float:left; width:20%;">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="YourGoal">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</li>
+				<li style="float:left; width:20%;"><div class="g-plusone" data-size="medium"></div></li>
+			</ul>
+            </div>
+			
+			
+		<div class="rightSide">
+        <div class="img-box">
+              <?php   $user_detail = User::model()->findByPk("$model->author_id");
+              
+              
+              $imagepath= $user_detail->avatar;
+              if($imagepath=="" || $imagepath=="gravatar") {?>            
+        <img src="<?php  echo Yii::app()->baseUrl;?>/images/tmp/dairy-img.png" width="215" height="201" alt="" />
+        <?php } else {?>
+         <img src="<?php  echo Yii::app()->baseUrl."/".$imagepath;?>" width="215" height="201" alt="" />
+            <?php } ?>
+        </div>
+        <div class="diary-UserInf profile-control">	
+         
+        <span class="dairy-userName"><?php echo $user_detail->username;?></span>
+        <hr />
+        <a href="" style="display:none" class="link massage-link">Messages</a><br>
+        <a href="<?php echo Yii::app()->createAbsoluteUrl("/profile/profile/views/id/".$model->author_id);?>" class="link profile-link">Profile</a>
+        </div>
+        </div>
+<div class="clearfix"></div>
+<div class="btmSide" style="display:none">
+<div class="progressState-pos">
+<span class="state-pos active">1</span>
+<span class="state-pos pos2">2</span>
+<span class="state-pos pos3">3</span>
+<span class="state-pos pos4">4</span>
+<span class="state-pos pos5">5</span>
+<span class="state-pos pos6">6</span>
+<span class="state-pos pos7">7</span>
+</div>
+<div class="item-progressLine">
+<div class="progressState" data-state="148"></div>
+</div>
+</div>
+</div>
+</div>
+    
+<div class="diaryEtaps">
+        <div class="diaryStages-list-head clearfix">
+		<?php if(!empty($model->image)) {?>
+        <img src="<?php echo Yii::app()->baseUrl."/".$model->image;?>" width="430" height="300" alt="" />
+		<?php } else {?>
+		<img src="<?php echo  Yii::app()->baseUrl?>/images/nogoal.jpg" width="430" height="300" alt="" />
+		<?php } ?>
+        <p>
+        <?php echo $model->discription;?>
+        </p>
+        </div>
+            <div class="diaryStages-list-box clearfix">
+            <h2>Steps to achieve the goals</h2>
+        <ol class="diaryStages-list">
+            <?php  
+            $ser_stage=unserialize($model->stage); 
+            $ser_des=unserialize($model->stage_description);
+            $counter=count($ser_stage);
+            $kk=0;$point=1;
+        // echo '<pre>'; print_r($ser_stage);  print_r($ser_des);echo '</pre>'; 
+            for($k=0;$k<$counter;$k++) {
+                if(!empty ($ser_stage[$k])):
+				
+            ?>
+				
+            <li class="btmBox">
+                <?php // echo $k; ?>
+				
+                <input type ="checkbox" class="checklist" onclick = "checkPointDone(<?php echo $point ?>);" id="checklist"name="steps" value="<?php echo $point; ?>" /><p class="title"><span style="float:left;"><?php echo $ser_stage[$k]; ?></span></p>
+                    
+                       <p><?php echo $ser_des[$k]; ?></p>
+                       
+
+              </li>
+      <?php $kk++; $point++; endif; } ?>
+            
+
+        </ol>
+		<script type="text/javascript">
+	 
+	 function checkPointDone(checkPointId)
+	 {
+		$.ajax({
+			type:'POST',
+			url:"<?php echo Yii::app()->createAbsoluteUrl("/goal/checkPointDone"); ?>",
+			data:{id:checkPointId, goalId:'<?php echo $model->id ?>'},
+			success: function(data){
+				if(data)
+				{
+					alert("Done----");
+				}else{
+					alert("Not Done-----");
+				}
+			}
+		
+		});
+	 }
+</script>
+        <span class="comments"><?php echo $model->commentCount;?> Comments</span>
+					</div>
+</div>
+
+	<?php //echo $model->comment_status; ?>
+
+<?php if($model->comment_status=="Yes") {?>
+
+
+
+        <div class="people-pager-side commentMod clearfix">
+            <h2 class="comment-title">Comment</h2>
+            <div class="commentForm-box clearfix">
+                
+	<?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
+		<div class="flash-success">
+			<?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
+		</div>
+	<?php else: ?>
+		<?php 
+		$id = Yii::app()->user->id;
+        $user_detail = User::model()->findByPk("$id");
+		if(!empty($user_detail)) 
+		{
+			
+			$connection = Yii::app()->db;
+			$sql="select * from profile where user_id=$user_detail->id";
+			$command = $connection->createCommand($sql);
+			$row = $command->queryRow();			
+			$comment->author=$row['firstname'];
+			$comment->email=$row['email'];
+			$comment->url=Yii::app()->createAbsoluteUrl("/profile/profile/views/id/".$id);
+			
+		}
+		$this->renderPartial('/comment/_form',array(
+			'model'=>$comment,
+		)); ?>
+		<?php //echo '<pre>';print_r($comment); echo '</pre>'; ?>
+	<?php endif; ?>
+<!--                    <form>
+                            <textarea class="textareaDef"></textarea>
+                            <input type="button" class="inputDefBtn" value="Send">
+                    </form>-->
+            </div>
+
+            <div class="commentsBox">					
+<?php $this->renderPartial('_comments',array(
+			'post'=>$model,
+			'comments'=>$model->comments,
+		)); ?>
+           
+<div class="comment-item clearfix"  style="display: none;">
+<div class="clearfix">
+<a href="" class="user-img-box">
+<img src="<?php  echo Yii::app()->baseUrl;?>/img/tmp/comment-user2.png" width="75" height="75" alt="" />
+</a>
+
+<div class="comment-body">
+<div class="userComment-info">
+<a href="" class="userComment-name">Юли�?</a>, 
+<span class="userComment-date">10 феврал�? 2014, 22:10</span>
+</div> 
+<p class="userComment-text">интере�?на�? цель) и заработок похоже тоже ) удачи вам в ее реализации.
+</p>
+
+<a href="" class="commentAnswer">Ответить</a> 
+</div>
+</div>
+<div class="comment-item clearfix">
+<div class="clearfix">
+<a href="" class="user-img-box">
+<img src="<?php  echo Yii::app()->baseUrl;?>/img/tmp/comment-user3.png" width="75" height="75" alt="" />
+
+</a>
+<div class="comment-body">
+<div class="userComment-info">
+<a href="" class="userComment-name">Юли�?</a>, 
+<span class="userComment-date">10 феврал�? 2014, 22:10</span>
+</div> 
+<p class="userComment-text">интере�?на�? цель) и заработок похоже тоже ) удачи вам в ее реализации.
+
+</p>
+<a href="" class="commentAnswer">Ответить</a> 
+</div>
+</div>
+</div><!--comment-item END-->
+</div><!--comment-item END-->
+
+
+					
+
+					</div>
+				</div>
+    <?php } ?>
+			</div>
+		</div>
+
+</section><!--END-->

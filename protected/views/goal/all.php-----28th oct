@@ -1,0 +1,15 @@
+<section class="mostPurpose">
+     <?php 
+     $actionId = strtolower($this->getAction()->getId());     
+     Yii::app()->user->setState('targetUrl', Yii::app()->createUrl('goal/'.$actionId.'')); 
+     ?>
+ <div class="section-wrapper clearfix">
+ <div class="mostPurpose-list grid" id="container">
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_listgoal',
+	'template'=>"{items}\n{pager}",
+)); ?>
+ </div>
+ </div>
+</section>

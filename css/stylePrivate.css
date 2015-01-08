@@ -1,0 +1,70 @@
+@charset "utf-8";
+html{}
+body{ margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;font-size:12px; }
+.clear{ clear:both;}
+a{ text-decoration:none;}
+/************* LOGIN PAGE ************/
+
+.loging_con {width:502px; margin:50px auto 0 auto; display:block; min-height:315px; background:url(../images/backend/log_bg.png) 0 0 no-repeat; padding:190px 70px 0 70px;color:#FFF;}
+.login_l{ width:245px; float:left;}
+.login_r{ width:245px; float:right;}
+.login_l a{ padding:6px 3px; text-decoration:none; color:#fff;}
+.lbl{  font-weight:bold; display:block; text-shadow:0 1px 1px #000; padding:0 0 4px 2px;}
+.lbl_0{  font-weight:bold; display:block; text-shadow:0 1px 1px #000; padding:0 0 8px 2px;}
+.fld{ width:190px; color:#000;text-shadow:0 1px 0px #fff; font-weight:bold; background:url(../images/backend/fld.jpg) 0 0 repeat-x; line-height:26px; height:26px; padding:0 12px; border:1px solid #fff; margin-bottom:5px; display:block; box-shadow:1px 1px 1px #000; -moz-box-shadow:1px 1px 1px #000; -o-box-shadow:1px 1px 1px #000; -webkit-box-shadow:1px 1px 1px #000; -ms-box-shadow:1px 1px 1px #000; -khtml-box-shadow:1px 1px 1px #000; border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; -webkit-border-radius:4px; -ms-border-radius:4px; -khtml-border-radius:4px; }
+.fld:focus{background:#CF9024; text-shadow:0 1px 0px #E4B35E;}
+.btn{ background:url(../images/backend/btn.jpg) 0 0 repeat-x; color:#464646; font-weight:bold;text-shadow:0 1px 1px #fff; line-height:27px; height:27px; padding: 0 15px; cursor:pointer;border:1px solid #fff;box-shadow:1px 1px 1px #000; -moz-box-shadow:1px 1px 1px #000; -o-box-shadow:1px 1px 1px #000; -webkit-box-shadow:1px 1px 1px #000; -ms-box-shadow:1px 1px 1px #000; -khtml-box-shadow:1px 1px 1px #000; border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; -webkit-border-radius:4px; -ms-border-radius:4px; -khtml-border-radius:4px;}
+.btn img{ margin-right:20px;}
+.btn:hover{ background:url(../images/backend/btn_roll.jpg) 0 0 repeat-x;text-shadow:0 1px 0px #fff;}
+.err_O{padding:0px 10px 30px 0px;}
+.err{ color:#F30; text-shadow:0 1px 1px #333;}
+.msg{ color:#090; padding:5px; background:#FFF; margin-bottom:10px; border-radius:4px; -moz-border-radius:4px; -o-border-radius:4px; -webkit-border-radius:4px; -ms-border-radius:4px; -khtml-border-radius:4px; }
+
+/************* ADMIN PAGE ************/
+.header{ background:url(../images/backend/header.png) 0 bottom repeat-x; padding-bottom:15px;}
+.w1000{ width:1000px; margin:0 auto;}
+.logo{ float:left; background:#fff url(../images/backend/logo_bg1.png) 0 bottom repeat-x; max-height:93px; padding:20px 30px; border-radius:0 0 8px 8px; -moz-border-radius:0 0 8px 8px; -o-border-radius:0 0 8px 8px; -webkit-border-radius:0 0 8px 8px; -ms-border-radius:0 0 8px 8px; -khtml-border-radius:0 0 8px 8px;}
+.name{ float:right; padding-top:35px;}
+.name a{ color:#FFF; font-size:14px; padding:5px 35px;}
+
+.menu_O{ width:264px;}
+.left{ margin-top:10px;width:250px; float:left; background:url(../images/backend/menu_o.png); padding:7px; border-radius:6px;}
+.right{ margin-top:10px;width:700px; float:right; background:url(../images/backend/table_bg.png); padding:12px;border-radius:6px;}
+.right .bar{ background:url(../images/backend/bar.png); border:4px; line-height:28px; height:28px; font-size:12px; padding:0 15px; color:#fff; border-radius:4px;}
+.right .bar a{ color:#fff;opacity:0.4;filter:alpha(opacity=40);}
+.right .nav_O{ padding:25px; background:url(../images/backend/nav_bg.png); margin:6px 0; border-radius:4px;}
+.right .nav_O a{ padding:5px; margin:15px; display:inline-block; background:url(../images/backend/icon_bg.png); border-radius:8px; -moz-border-radius:8px; -o-border-radius:8px; -webkit-border-radius:8px; -ms-border-radius:8px; -khtml-border-radius:8px; }
+.right .nav_O a:hover{ background:url(../images/backend/icon_hbg.png);  }
+.right .nav_O img{ width:64px; height:64px;  }
+.right .heading{ background:url(../images/backend/heading_bg.png); border-radius:4px 4px 0 0; color:#fff; line-height:35px; height:35px; padding:0 20px; font-size:18px;}
+.table{ border-collapse:collapse;}
+.table th, .table td{padding:5px; text-align:left; }
+.table th{ background:url(../images/backend/th.png);text-shadow:0 1px 0 #6F8185; padding:8px 5px;}
+.table td{ color:#313131; font-weight:bold;}
+.table tr.light{background:url(../images/backend/td2.png);text-shadow:0 1px 0 #B9C6CB;}
+.table tr.dark{ background:url(../images/backend/td1.png);color:#313131; text-shadow:0 1px 0 #A5B1B7;}
+.table tr.light:hover, .table tr.dark:hover{ background: #ddd url(../images/backend/td3.png); cursor:pointer;}
+
+.table input[type=text], .table input[type=password], .table textarea { border:1px solid #666; padding:5px; width:200px; }
+.errorMessage { color:#F00; }
+
+/********* leftbar *********/
+.leftbar_menu { padding:0; margin:0; list-style:none;  }
+.leftbar_menu li { padding:5px 0; background:#fefefe; border-bottom:1px dotted #ccc;  }
+.leftbar_menu li a{ color:#444; padding:1px 0 7px 25px; }
+.leftbar_menu li a:hover{ text-decoration:underline; }
+.leftbar_menu li a.home{ background:url(../images/backend/leftbar/home.png) no-repeat; }
+.leftbar_menu li a.logout{ background:url(../images/backend/leftbar/sign_out.png) no-repeat; }
+.leftbar_menu li a.general{ background:url(../images/backend/leftbar/post_add.png) no-repeat; }
+.leftbar_menu li a.postcat{ background:url(../images/backend/leftbar/category.png) no-repeat; }
+.leftbar_menu li a.bg{ background:url(../images/backend/leftbar/color.png) no-repeat; }
+.leftbar_menu li a.userlist{ background:url(../images/backend/leftbar/user_list.png) no-repeat; }
+.leftbar_menu li a.useradd{ background:url(../images/backend/leftbar/user_add.png) no-repeat; }
+.leftbar_menu li a.userprof{ background:url(../images/backend/leftbar/pro.png) no-repeat; }
+.leftbar_menu li a.aboutus{ background:url(../images/backend/leftbar/aboutus.png) no-repeat; }
+.leftbar_menu li a.conatct{ background:url(../images/backend/leftbar/contact.png) no-repeat; }
+.leftbar_menu li a.privacy{ background:url(../images/backend/leftbar/privacy.png) no-repeat; }
+.leftbar_menu li a.setting{ background:url(../images/backend/leftbar/setting.png) no-repeat; }
+/********* end leftbar *********/
+
+#colorpicker { width:150px; }
