@@ -18,8 +18,8 @@
                                                             Yum::module('registration')->registrationUrl, array('class'=>"login-panel-link") );
                                 elseif(!Yii::app()->user->isGuest):
                             ?>
-                                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/goal/dashboard"); //echo Yii::app()->createAbsoluteUrl("/profile/profile/view"); ?>" class="login-panel-link"><?php echo Yum::t("My Account"); ?></a> / 
-                                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/user/user/logout"); ?>" class="login-panel-link"><?php echo Yum::t("logout"); ?></a>/
+                                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/goal/dashboard"); //echo Yii::app()->createAbsoluteUrl("/profile/profile/view"); ?>" class="login-panel-link"><?php echo Yum::t("Мой аккаунт"); ?></a> / 
+                                    <a href="<?php echo Yii::app()->createAbsoluteUrl("/user/user/logout"); ?>" class="login-panel-link"><?php echo Yum::t("Выйти"); ?></a>/
 <!--                                    <a href="<?php  ?>" class="login-panel-link">DB</a> -->
                             <?php 
                                 endif;
