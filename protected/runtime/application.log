@@ -23279,3 +23279,416 @@ Stack trace:
 REQUEST_URI=/css/img/icons-s58c72950db.png
 HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
 ---
+2015/01/12 12:37:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:55:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:55:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yourgoal\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yourgoal\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yourgoal\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yourgoal\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yourgoal\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('blogposts/view')
+#10 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/blogposts/26
+HTTP_REFERER=http://yourgoal.dev/blog/Test_russkogo_nazvaniya
+---
+2015/01/13 10:58:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:59:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:59:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 10:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:00:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:00:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:00:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:01:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:03:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:03:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:04:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:08:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:08:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:12:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:12:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:12:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:13:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:14:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:15:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:17:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:19:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/icons-s58c72950db.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/icons-s...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/icons-s58c72950db.png
+HTTP_REFERER=http://yourgoal.dev/css/blog/screen.css
+---
+2015/01/13 11:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/favicon.ico".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('images/favicon....')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/favicon.ico
+---
+2015/01/13 11:31:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backend/logo_bg1.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backend/...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/backend/logo_bg1.png
+HTTP_REFERER=http://yourgoal.dev/css/stylePrivate.css
+---
+2015/01/13 11:37:17 [error] [php] include(CJuiWidget.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yourgoal\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\protected\modules\admin\components\LeftBar.php(3): spl_autoload_call()
+#1 C:\xampp\htdocs\yourgoal\framework\YiiBase.php(427): include()
+#2 unknown(0): autoload()
+#3 C:\xampp\htdocs\yourgoal\protected\modules\admin\layouts\adminmain.php(38): spl_autoload_call()
+#4 C:\xampp\htdocs\yourgoal\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\yourgoal\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\yourgoal\framework\web\CController.php(784): SiteController->renderFile()
+#7 C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\SiteController.php(58): SiteController->render()
+#8 C:\xampp\htdocs\yourgoal\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\xampp\htdocs\yourgoal\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yourgoal\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\yourgoal\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yourgoal\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\components\LeftBar.php (3)
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\layouts\adminmain.php (38)
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\SiteController.php (58)
+2015/01/13 11:38:19 [error] [php] Undefined index: button (C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\StaticController.php:74)
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilterChain.php(133): StaticController->runAction()
+#1 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yourgoal\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yourgoal\framework\web\filters\CInlineFilter.php(58): StaticController->filterAccessControl()
+#4 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yourgoal\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yourgoal\framework\web\CController.php(265): StaticController->runActionWithFilters()
+#7 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(282): StaticController->run()
+#8 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yourgoal\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/static/textpage
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\StaticController.php (74)
+in C:\xampp\htdocs\yourgoal\index.php (13)
+2015/01/13 11:38:29 [error] [php] Undefined index: button (C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\StaticController.php:74)
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilterChain.php(133): StaticController->runAction()
+#1 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yourgoal\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yourgoal\framework\web\filters\CInlineFilter.php(58): StaticController->filterAccessControl()
+#4 C:\xampp\htdocs\yourgoal\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yourgoal\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yourgoal\framework\web\CController.php(265): StaticController->runActionWithFilters()
+#7 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(282): StaticController->run()
+#8 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yourgoal\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/static/textpage
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\StaticController.php (74)
+in C:\xampp\htdocs\yourgoal\index.php (13)
+2015/01/13 19:53:21 [error] [php] Non-static method YumProfile::getProfileFields() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\yourgoal\protected\modules\user\models\YumUser.php:246)
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\xampp\htdocs\yourgoal\framework\web\CController.php(869): UserController->renderFile()
+#2 C:\xampp\htdocs\yourgoal\framework\web\CController.php(782): UserController->renderPartial()
+#3 C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\UserController.php(406): UserController->render()
+#4 C:\xampp\htdocs\yourgoal\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#5 C:\xampp\htdocs\yourgoal\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yourgoal\framework\web\CController.php(286): UserController->runAction()
+#7 C:\xampp\htdocs\yourgoal\framework\web\CController.php(265): UserController->runActionWithFilters()
+#8 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(282): UserController->run()
+#9 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yourgoal\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/user/admin
+in C:\xampp\htdocs\yourgoal\protected\modules\user\models\YumUser.php (246)
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\views\user\admin.php (11)
+in C:\xampp\htdocs\yourgoal\protected\modules\admin\controllers\UserController.php (406)
+2015/01/13 20:08:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/backend/logo_bg1.png".' in C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yourgoal\framework\web\CWebApplication.php(141): CWebApplication->runController('images/backend/...')
+#1 C:\xampp\htdocs\yourgoal\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yourgoal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/backend/logo_bg1.png
+HTTP_REFERER=http://yourgoal.dev/css/stylePrivate.css
+---

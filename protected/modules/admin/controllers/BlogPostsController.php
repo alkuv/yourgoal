@@ -1,6 +1,6 @@
 <?php
 
-class BlogPostsController extends Controller
+class BlogpostsController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -52,6 +52,9 @@ class BlogPostsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(YII::app()->user->isGuest){
+			$this->redirect('/admin/site/login');
+		}
 		$this->layout = 'manager';
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -64,6 +67,9 @@ class BlogPostsController extends Controller
 	 */
 	public function actionCreate()
 	{
+	    if(YII::app()->user->isGuest){
+			$this->redirect('/admin/site/login');
+		}
 
 		$model=new BlogPosts;
 		$this->layout = 'manager';
@@ -98,6 +104,9 @@ class BlogPostsController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		if(YII::app()->user->isGuest){
+			$this->redirect('/admin/site/login');
+		}
 		$this->layout = 'manager';
 		$model=$this->loadModel($id);
 		$tagsmodel = new Tags();
@@ -129,6 +138,9 @@ class BlogPostsController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		if(YII::app()->user->isGuest){
+			$this->redirect('/admin/site/login');
+		}
 		$this->layout = 'manager';
 		$this->loadModel($id)->delete();
 
@@ -142,6 +154,9 @@ class BlogPostsController extends Controller
 	 */
 	public function actionIndex()
 	{
+		if(YII::app()->user->isGuest){
+			$this->redirect('/admin/site/login');
+		}
 		$this->layout = 'manager';
 		$model = new BlogPosts();
 		$dataProvider=new CActiveDataProvider('BlogPosts', array(

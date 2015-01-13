@@ -1,8 +1,10 @@
 <?php
-class LeftBar
+class LeftBar extends CWidget
 {
 	public function showMenu()
 	{
+		// $this->widget('zii.widgets.jui.CJuiAccordion', array());
+		// die('here');
 		$this->widget('zii.widgets.jui.CJuiAccordion', array(
 			'panels'=>array(
 				'Dashboard'=>'<ul class="leftbar_menu">
@@ -104,6 +106,9 @@ class LeftBar
                                 'Manage Feedbacks'=>'<ul class="leftbar_menu">
                                             <li><a class="aboutus" href="' .Yii::app()->getBaseUrl()."/index.php/admin/feedback/admin".  '">All Feedbacks</a></li>
 											 <li><a class="aboutus" href="' .Yii::app()->getBaseUrl()."/index.php/admin/feedback/create".  '">Add Feedback</a></li>
+                               </ul>',
+                                'Manage Blog'=>'<ul class="leftbar_menu">
+                                            <li><a class="aboutus" href="' .Yii::app()->getBaseUrl()."/index.php/admin/blogposts".  '">Go to Blog</a></li>
                                </ul>',
 //                                'Manage VHS Covers'=>'<ul class="leftbar_menu">
 //								<li><a class="aboutus" href="' . Yii::app()->createUrl("admin/vhsCategory/admin") . '">All Categories</a></li>

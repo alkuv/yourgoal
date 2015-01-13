@@ -11,6 +11,23 @@
 			}, "json");
 		}
 	</script>
+	<style type="text/css">
+		.inputCommentBtn{
+			width: 246px;
+			background-color: #ffba00;
+			font-family: 'open_sanssemibold';
+			font-size: 18px;
+			color: #FFF;
+			border: 1px solid #ffc52a;
+			padding: 6px 0 9px 0;
+			border-radius: 4px;
+			box-shadow: 0 1px 4px 0 rgba(0,0,0, 0.1);
+			cursor: pointer;
+			margin: 0 0 0 11px;
+			width: 126px;
+			padding-top: 8px;
+		}
+	</style>
 
 	<!-- BEGIN filter -->
 	<div class="filter">
@@ -92,9 +109,10 @@
 						</div>
 					</div>
 					<?php //var_dump($model->user->username); ?>
-					<div class="user__name"><?php echo $model->user->username; ?>,</div>
-					<div class="user__text">повелитель фиолетовых лобстеров</div>
+					<div class="user__name"><?php echo $model->user->username; ?></div>
+					<!-- <div class="user__text">повелитель фиолетовых лобстеров</div> -->
 					<!-- BEGIN like -->
+					<br>
 					<div class="like is-active"><span id="like_<?php echo $model->id; ?>"><?php echo BlogLikes::getLikesCount($model->id); ?></span><i class="ico ico_like" onClick="like(<?php echo $model->id; ?>);return false;"></i></div>
 					<!-- END like -->
 				</div>
@@ -170,7 +188,7 @@
 
 							<?php echo $form->hiddenField($commentmodel,'answer_id', array('id' => 'answer_id')); ?>
 
-							<?php echo CHtml::submitButton('Отправить', array('class' => 'inputDefBtn')); ?>
+							<?php echo CHtml::submitButton('Отправить', array('class' => 'inputCommentBtn')); ?>
 
 					<?php $this->endWidget(); ?>
 

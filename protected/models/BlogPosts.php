@@ -190,19 +190,31 @@ class BlogPosts extends CActiveRecord
 
     public static function getTitle($id){
         $r = self::model()->findByPk($id);
-        return $r->title;
+        return trim($r->title);
     }
+
+    public static function getMetaDescription($id){
+        $r = self::model()->findByPk($id);
+        
+        $string = trim($r->description);
+		$string = strip_tags($string);
+		$string = substr($string, 0, 300);
+		$string = rtrim($string, "!,.-");
+		$string = substr($string, 0, strrpos($string, ' '));
+        
+        return trim($string);
+    } 
 
     public static function getShortDescription($id){
         $r = self::model()->findByPk($id);
         
-        $string = $r->description;
+        $string = trim($r->description);
 		$string = strip_tags($string);
-		$string = substr($string, 0, 500);
+		$string = substr($string, 0, 600);
 		$string = rtrim($string, "!,.-");
 
 		$string = substr($string, 0, strrpos($string, ' '));
         
-        return trim($string);
+        return $string;
     }  
 }

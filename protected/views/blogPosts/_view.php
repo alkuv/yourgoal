@@ -23,9 +23,10 @@
 						</div>
 					</div>
 					<?php //var_dump($data->user->username); ?>
-					<div class="user__name"><?php echo $data->user->username; ?>,</div>
-					<div class="user__text">повелитель фиолетовых лобстеров</div>
+					<div class="user__name"><?php echo $data->user->username; ?></div>
+					<!-- <div class="user__text">повелитель фиолетовых лобстеров</div> -->
 					<!-- BEGIN like -->
+					<br>
 					<div class="like is-active"><span id="like_<?php echo $data->id; ?>"><?php echo BlogLikes::getLikesCount($data->id); ?></span><i class="ico ico_like" onClick="like(<?php echo $data->id; ?>);return false;"></i></div>
 					<!-- END like -->
 				</div>
@@ -68,7 +69,7 @@
 					<!-- END tags -->
 					<h1><?php echo $data->title; ?></h1>
 
-					<p><?php echo BlogPosts::getShortDescription($data->id)."...";?></p>
+					<p><?php echo BlogPosts::getShortDescription($data->id)."[...]";?></p>
 					<div class="row">
 						<a href="<?php echo "/blog/".$data->url; ?>" class="btn">Читать дальше</a>
 						<!-- BEGIN soc -->

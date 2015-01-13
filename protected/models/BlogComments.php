@@ -107,10 +107,10 @@ class BlogComments extends CActiveRecord
 	}
 
 	public function getComments($bp_id){
-		return self::model()->findAll("bp_id = :id and answer_id = 0", array(":id" => $bp_id));
+		return self::model()->findAll("bp_id = :id and answer_id = 0 ORDER BY id DESC", array(":id" => $bp_id));
 	}
 
 	public static function getSubComments($bp_id ,$answer_id){
-		return self::model()->findAll("bp_id = :id and answer_id = :aid", array(":id" => $bp_id, ":aid" => $answer_id));
+		return self::model()->findAll("bp_id = :id and answer_id = :aid  ORDER BY id DESC", array(":id" => $bp_id, ":aid" => $answer_id));
 	}
 }

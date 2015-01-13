@@ -1,6 +1,6 @@
 <?php
 
-class BlogPostsController extends Controller
+class BlogpostsController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -56,8 +56,8 @@ class BlogPostsController extends Controller
 
 		$id = $model->getIdByAlias($alias);
 
-		$this->pageTitle = BlogPosts::getTitle($id);
-        $this->pageDescription = BlogPosts::getShortDescription($id);
+		$this->pageTitle = BlogPosts::getTitle($id)." / YourGoal";
+        $this->pageDescription = BlogPosts::getMetaDescription($id);
         $this->pageTags = Tags::getTags($id);
 
 		
@@ -79,7 +79,7 @@ class BlogPostsController extends Controller
 		        if($commentmodel->validate()) 
 		        { 
 		            $commentmodel->save();
-		            $this->redirect(array('view','id'=>$id));
+		            $this->refresh();
 		            // form inputs are valid, do something here 
 		            //return; 
 		        } 
@@ -104,6 +104,11 @@ class BlogPostsController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$this->pageTitle = "Blog Yourgoal";
+		// Вы можете здесь добавить дескрипшин и теги для главной блога
+		$this->pageDescription = "";
+		$this->pageTags = "";
+
 		$model = new BlogPosts();
 		$posts = $model->getPosts();
 		$category = Categories::model()->findAll();
